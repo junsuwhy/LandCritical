@@ -19,8 +19,8 @@ basedata={"name":["101年8月","101年9月","101年10月","101年11月","101年1
 
 
 function showchart(countryname){
-  //$('.xc').remove();
-  //$('.xline').remove();
+  $('.xc').remove();
+  $('.xline').remove();
   $('#charttext').text('過去'+countryname+'平均房價波動');
   //$this.attr('display','block');
   dvcircle=svg.selectAll('g')
@@ -167,9 +167,10 @@ $().ready(function(){
             .attr('stroke-width',1);
       //30萬text
       svg.append('text')
-            .text('30萬')
-            .attr('x',x(-1))
-            .attr('y',y(30));
+            .text('30萬/坪')
+            .attr('text-anchor','end')
+            .attr('x',x(-0))
+            .attr('y',y(29));
       
             //60萬線
     svg.append('line')
@@ -181,9 +182,10 @@ $().ready(function(){
             .attr('stroke-width',1);
       //60萬text
       svg.append('text')
-            .text('60萬')
-            .attr('x',x(-1))
-            .attr('y',y(60));
+            .text('60萬/坪')
+            .attr('text-anchor','end')
+            .attr('x',x(-0))
+            .attr('y',y(59));
       //字
       svg.append('text')
             .text('101年8月')
