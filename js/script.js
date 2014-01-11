@@ -46,8 +46,8 @@ function showchart(countryname){
                     .on('mouseout',function(){
                         $('#tiptool').css('display','none');
                     })
+;
             ;
-          
   dvline=svg.selectAll('g')
             .data(basedata[countryname])
             .enter()
@@ -165,7 +165,7 @@ $().ready(function(){
             .attr('y2',y(30))
             .attr('stroke','#ffcca2')
             .attr('stroke-width',1);
-      //30萬text
+     //30萬text
       svg.append('text')
             .text('30萬/坪')
             .attr('text-anchor','end')
