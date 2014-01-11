@@ -55,4 +55,17 @@ $().ready(function(){
         }
         
     });
+
+    //for Chart SVG
+    svg=d3.select('#chart');
+    d3.csv("http://whycatstyle.com/data/fonggia.csv",function(d){
+      return d
+    },function(e,d){
+      console.log(d);
+      chart=svg.selectAll('g').data(d).enter();
+
+    });
+
+
+
 });
