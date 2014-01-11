@@ -19,8 +19,8 @@ basedata={"name":["101年8月","101年9月","101年10月","101年11月","101年1
 
 
 function showchart(countryname){
-  $('.xc').remove();
-  $('.xline').remove();
+  //$('.xc').remove();
+  //$('.xline').remove();
   $('#charttext').text('過去'+countryname+'平均房價波動');
   //$this.attr('display','block');
   dvcircle=svg.selectAll('g')
@@ -46,8 +46,8 @@ function showchart(countryname){
                     .on('mouseout',function(){
                         $('#tiptool').css('display','none');
                     })
-;
             ;
+          
   dvline=svg.selectAll('g')
             .data(basedata[countryname])
             .enter()
