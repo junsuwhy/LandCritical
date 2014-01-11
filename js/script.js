@@ -10,10 +10,11 @@ function  mapTo (x,y,z){
 $().ready(function(){
     $('#country').change(function(){
         cty=$('#country').val();
-        $('#line_chart')
+        /*$('#line_chart')
         .empty()
         .append($('<img>')
         .attr('src','./imgs/'+cty+'.jpg'));
+        */
         
         switch(cty){
             case '新北市':
@@ -58,7 +59,7 @@ $().ready(function(){
 
     //for Chart SVG
     svg=d3.select('#chart');
-    d3.csv("http://whycatstyle.com/data/fonggia.csv",function(d){
+    d3.csv("data/fonggia.csv",function(d){
       return d
     },function(e,d){
       console.log(d);
