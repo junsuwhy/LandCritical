@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>土地買賣稅費異常資料查詢平台</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div class="logo"><img src="imgs/logo_trt.png" height="60" width="60"></div>
+			<h1>土地買賣稅費異常資料查詢平台</h1>
+		</div>
+<div id="setting" style="margin: 4px 8px 0 0;">
+地區：
+<select class="span2" id="country" >
+<option selected value="請選擇縣市"><請選擇縣市></option>	
+<option value="新北市">新北市</option>
+<option value="台北市">台北市</option>
+<option value="台中市">台中市</option>
+<option value="台南市">台南市</option>
+<option value="高雄市">高雄市</option>
+<option value="基隆市">基隆市</option>
+<option value="新竹市">新竹市</option>
+<option value="嘉義市">嘉義市</option>
+<option value="桃園縣">桃園縣</option>
+<option value="新竹縣">新竹縣</option>
+<option value="苗栗縣">苗栗縣</option>
+<option value="彰化縣">彰化縣</option>
+<option value="南投縣">南投縣</option>
+<option value="雲林縣">雲林縣</option>
+<option value="嘉義縣">嘉義縣</option>
+<option value="屏東縣">屏東縣</option>
+<option value="宜蘭縣">宜蘭縣</option>
+<option value="花蓮縣">花蓮縣</option>
+<option value="台東縣">台東縣</option>
+<option value="澎湖縣">澎湖縣</option>
+<option value="金門縣">金門縣</option>
+<option value="連江縣">連江縣</option>
+</select>
+
+<select class="span2" id="region">
+<option selected value="鄉鎮市區"><鄉鎮市區></option>
+<option value="中正區">中正區</option>
+<option value="大同區">大同區</option>
+<option value="中山區">中山區</option>
+<option value="萬華區">萬華區</option>
+<option value="信義區">信義區</option>
+<option value="松山區">松山區</option>
+<option value="大安區">大安區</option>
+<option value="南港區">南港區</option>
+<option value="北投區">北投區</option>
+<option value="內湖區">內湖區</option>
+<option value="士林區">士林區</option>
+<option value="文山區">文山區</option>
+</select>
+
+時間：
+<div class="input-prepend">
+	<span class="add-on">
+<label>
+<input id="period" type="checkbox" value="checkbox">
+限定在區間
+</label>
+</span>
+
+
+<select class="span2" id="periodfrom">
+<option selected="" value="民國101年8月">民國101年8月</option>
+<option value="民國101年9月">民國101年9月</option>
+<option value="民國101年10月">民國101年10月</option>
+<option value="民國101年11月">民國101年11月</option>
+<option value="民國101年12月">民國101年12月</option>
+<option value="民國102年1月">民國102年1月</option>
+<option value="民國102年2月">民國102年2月</option>
+<option value="民國102年3月">民國102年3月</option>
+<option value="民國102年4月">民國102年4月</option>
+<option value="民國102年5月">民國102年5月</option>
+<option value="民國102年6月">民國102年6月</option>
+<option value="民國102年7月">民國102年7月</option>
+<option value="民國102年8月">民國102年8月</option>
+<option value="民國102年9月">民國102年9月</option>
+</select>
+</div>
+
+<div class="input-prepend input-append">
+
+<span class="add-on">到</span>
+
+<select class="span2" id="periodto">
+<option value="民國101年8月">民國101年8月</option>
+<option value="民國101年9月">民國101年9月</option>
+<option value="民國101年10月">民國101年10月</option>
+<option value="民國101年11月">民國101年11月</option>
+<option value="民國101年12月">民國101年12月</option>
+<option value="民國102年1月">民國102年1月</option>
+<option value="民國102年2月">民國102年2月</option>
+<option value="民國102年3月">民國102年3月</option>
+<option value="民國102年4月">民國102年4月</option>
+<option value="民國102年5月">民國102年5月</option>
+<option value="民國102年6月">民國102年6月</option>
+<option value="民國102年7月">民國102年7月</option>
+<option value="民國102年8月">民國102年8月</option>
+<option selected value="民國102年9月">民國102年9月</option>
+</select>
+
+<button id="submit" class="btn" style="margin: 4px 0 0 8px;">送出</button>
+</div>
+
+</div>
+<div id="line_chart">
+	<iframe frameborder="0" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;viz=GVIZ&amp;t=LINE_AGGREGATE&amp;isXyPlot=true&amp;bsize=0&amp;q=select+col3%2C+col7+from+1BILYy9TOfCajakAc0_mVuM4KiN8EdroQxzahA-g&amp;qrs=+where+col3+%3E%3D+&amp;qre=+and+col3+%3C%3D+&amp;qe=+order+by+col3+asc&amp;uiversion=2&amp;rstart=0.45&amp;rend=50.004351032448376&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=460&amp;height=400" style="height: 400px; width:100%;"></iframe>
+</div>
+
+<div id="map">
+	<iframe id='ifmap' src="https://www.google.com/fusiontables/embedviz?q=select+col2+from+1BILYy9TOfCajakAc0_mVuM4KiN8EdroQxzahA-g&viz=MAP&h=false&lat=23.66519554836995&lng=121.2888611368409&t=1&z=7&l=col2&y=2&tmplt=2&hml=ONE_COL_LAT_LNG" frameborder="0" style="height: 400px; width:100%"></iframe>
+</div>
+
+</div>
+</body>
+</html>
