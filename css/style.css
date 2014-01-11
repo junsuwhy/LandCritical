@@ -35,6 +35,8 @@ div#wrapper{
 	float: left;
 	border: 2px;
 	border-color: #666666;
+	overflow: hidden;
+
 }
 
 #map{
@@ -45,4 +47,13 @@ div#wrapper{
 	float: left;
 	border: 2px;
 	border-color: #666666;
+}
+
+#chart{
+	width:461px;
+	height: 400px;
+	background: #fff;
+}
+#tiptool{
+	position: absolute;
 }
